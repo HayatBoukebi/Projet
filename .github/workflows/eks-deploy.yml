@@ -63,7 +63,6 @@ jobs:
       - name: Apply namespace
         run: |
           kubectl apply -f k8s/namespace.yaml
-          kubectl wait --for=condition=Established --timeout=15s namespace/myapp
 
       # 9️⃣ Replace IMAGE_TAG and AWS_ACCOUNT_ID in deployment.yaml
       - name: Replace image tag
